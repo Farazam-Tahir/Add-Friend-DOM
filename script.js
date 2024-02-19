@@ -1,12 +1,15 @@
 let addRemove = document.querySelector("#addRemove");
 let FriendStatus = document.querySelector("#status");
+let option = 0;
 addRemove.addEventListener('click',()=>{
-    if (addRemove.innerHTML == "Add Friend") {
+    if (!option) {
         addRemove.innerHTML = "Remove";
         FriendStatus.innerHTML = "Friend";
+        option++;
     }else{
         addRemove.innerHTML = "Add Friend";
         FriendStatus.innerHTML = "Not a Friend";
+        option--;
     }
 })
 
